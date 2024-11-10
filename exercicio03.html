@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport"   content="width=device-width, initial-scale=1.0">
+    <title>GN | 03 </title>
+    <style>
+        body{
+            background-color: cornflowerblue;
+            font-family: 'Courier New', Courier, monospace;
+            text-align: center;
+        }
+        .box-nav{
+            background-color: gold;
+            padding: 5px;
+            border-radius: 15px;
+        }
+        .box{
+            background: rgba(0, 0, 0, 0.6);
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+            padding: 15px;
+            border-radius: 15px;
+            color: white;
+        }
+        input{
+            padding: 10px;
+            border: none;
+            outline: none;
+            border-radius: 10px;
+            font-size: 15px;
+            width: 50%;
+        }
+        button{
+            padding: 2%;
+            border: none;
+            outline: none;
+            width: 10%;
+            background-color: slateblue;
+            color: white;
+            border-radius: 10%;
+            cursor: pointer;
+            transition: 0.6s;
+        }
+        button:hover{
+            background-color: cornflowerblue;
+        }
+    </style>
+
+</head>
+<body>
+    <div class="box-nav">
+        <h1>EXERCICIO #03</h1>
+        <h2>Prof. Gustavo Neitzke</h2>
+    </div>
+    <div class="box">
+        <p>Leia das idades de duas criancas. após, calcular e mostrar a soma das idades e a média.</p>
+        <input type="number" placeholder="Digite a idade da criança 1">
+        <br><br>
+        <input type="number" placeholder="Digite a idade da criança 2">
+        <br><br>
+        <button onclick="somamedia()">enviar</button>
+    </div>
+</body>
+<script>
+    function somamedia()
+    {
+        var idade1 =  parseInt(document.querySelector('#crianca1').value);
+        var idade2 = parseInt(document.querySelector('#crianca2').value);
+        var soma = idade1 + idade2;
+        var media = soma / 2;
+
+
+            console.log('Soma:  ' + soma)
+            console.log('Media:  ' + media)
+       
+        
+    }
+</script>
+</html>
